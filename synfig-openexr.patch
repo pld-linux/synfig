@@ -1,0 +1,11 @@
+--- src/modules/mod_openexr/Makefile.in~	2006-01-11 11:18:55.000000000 +0100
++++ src/modules/mod_openexr/Makefile.in	2006-01-11 11:18:55.000000000 +0100
+@@ -256,7 +256,7 @@
+ @WITH_OPENEXR_TRUE@libmod_openexr_la_SOURCES = main.cpp mptr_openexr.cpp mptr_openexr.h trgt_openexr.cpp trgt_openexr.h
+ @WITH_OPENEXR_TRUE@libmod_openexr_la_LDFLAGS = -module @PNG_LIBS@ -no-undefined
+ @WITH_OPENEXR_TRUE@libmod_openexr_la_LIBADD = -L../../synfig -lsynfig @SYNFIG_LIBS@
+-@WITH_OPENEXR_TRUE@libmod_openexr_la_CXXFLAGS = @SYNFIG_CFLAGS@
++@WITH_OPENEXR_TRUE@libmod_openexr_la_CXXFLAGS = @SYNFIG_CFLAGS@ @OPENEXR_CFLAGS@
+ EXTRA_DIST = mod_openexr.nsh unmod_openexr.nsh
+ all: all-am
+ 
