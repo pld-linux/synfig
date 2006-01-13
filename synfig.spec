@@ -1,5 +1,5 @@
-#
 Summary:	Vector-based 2D animation software package
+Summary(pl):	Pakiet oprogramowania do wektorowych animacji 2D
 Name:		synfig
 Version:	0.61.03
 Release:	0.1
@@ -7,8 +7,8 @@ License:	GPL v2
 Group:		Applications/Graphics
 Source0:	http://www.bridgetone.com/voria/files/%{name}-%{version}.tar.gz
 # Source0-md5:	79833d8a264fce9a891683bf8fb4a0a1
-Patch0:		synfig-openexr.patch
-URL:		http://www.synfig.com
+Patch0:		%{name}-openexr.patch
+URL:		http://www.synfig.com/
 BuildRequires:	ETL
 BuildRequires:	libxml++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -20,6 +20,14 @@ feature-film quality animation with fewer people and resources.
 While there are many other programs currently on the market to aid 
 with the efficient production of 2D animation, we are currently 
 unaware of any other software that can do what our software can.
+
+%description -l pl
+Synfig to potê¿ny, o sile przemys³owej pakiet oprogramowania do
+wektorowych animacji 2D, zaprojektowany od podstaw do tworzenia
+animacji o jako¶ci filmowej przy mniejszym zaanga¿owaniu ludzi i
+zasobów. O ile na rynku jest wiele innych programów pomagaj±cych przy
+wydajnej produkcji animacji 2D, autorzy nie znaj± innego
+oprogramowania o takich mo¿liwo¶ciach jak synfig.
 
 %prep
 %setup -q
@@ -47,15 +55,20 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-
 %files
 %defattr(644,root,root,755)
 %doc NEWS README TODO
-/etc/synfig_modules.cfg
 %attr(755,root,root) %{_bindir}/synfig*
-/usr/include/synfig-0.0/synfig/*
-%{_libdir}/libsynfig.la
-%{_libdir}/libsynfig.so.0.0.0
-%{_pkgconfigdir}/synfig.pc
+%attr(755,root,root) %{_libdir}/libsynfig.so.*.*.*
+%dir %{_libdir}/synfig
+%dir %{_libdir}/synfig/modules
+%attr(755,root,root) %{_libdir}/synfig/modules/*.so.*
 %{_libdir}/synfig/modules/*.la
-%{_libdir}/synfig/modules/*.so.*
+/etc/synfig_modules.cfg
+
+#%files devel
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libsynfig.so
+%{_libdir}/libsynfig.la
+%{_includedir}/synfig-0.0
+%{_pkgconfigdir}/synfig.pc
