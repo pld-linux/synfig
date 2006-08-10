@@ -29,6 +29,18 @@ zasobów. O ile na rynku jest wiele innych programów pomagaj±cych przy
 wydajnej produkcji animacji 2D, autorzy nie znaj± innego
 oprogramowania o takich mo¿liwo¶ciach jak synfig.
 
+%package devel
+Summary:	Header files for Synfig
+Summary(pl):	Pliki nag³ówkowe Synfiga
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+
+%description devel
+Header files for Synfig.
+
+%description devel -l pl
+Pliki nag³ówkowe Synfiga.
+
 %prep
 %setup -q
 %patch0 -p0
@@ -55,6 +67,9 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
 %doc NEWS README TODO
@@ -64,10 +79,11 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/synfig/modules
 %attr(755,root,root) %{_libdir}/synfig/modules/*.so.*
 %{_libdir}/synfig/modules/*.la
-/etc/synfig_modules.cfg
+# XXX: %config() ???
+%{_sysconfdir}/synfig_modules.cfg
 
-#%files devel
-#%defattr(644,root,root,755)
+%files devel
+%defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libsynfig.so
 %{_libdir}/libsynfig.la
 %{_includedir}/synfig-0.0
