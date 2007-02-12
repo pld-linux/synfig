@@ -1,5 +1,5 @@
 Summary:	Vector-based 2D animation software package
-Summary(pl):	Pakiet oprogramowania do wektorowych animacji 2D
+Summary(pl.UTF-8):   Pakiet oprogramowania do wektorowych animacji 2D
 Name:		synfig
 Version:	0.61.03
 Release:	0.1
@@ -21,25 +21,25 @@ While there are many other programs currently on the market to aid
 with the efficient production of 2D animation, we are currently 
 unaware of any other software that can do what our software can.
 
-%description -l pl
-Synfig to potÍøny, o sile przemys≥owej pakiet oprogramowania do
+%description -l pl.UTF-8
+Synfig to potƒô≈ºny, o sile przemys≈Çowej pakiet oprogramowania do
 wektorowych animacji 2D, zaprojektowany od podstaw do tworzenia
-animacji o jako∂ci filmowej przy mniejszym zaangaøowaniu ludzi i
-zasobÛw. O ile na rynku jest wiele innych programÛw pomagaj±cych przy
-wydajnej produkcji animacji 2D, autorzy nie znaj± innego
-oprogramowania o takich moøliwo∂ciach jak synfig.
+animacji o jako≈õci filmowej przy mniejszym zaanga≈ºowaniu ludzi i
+zasob√≥w. O ile na rynku jest wiele innych program√≥w pomagajƒÖcych przy
+wydajnej produkcji animacji 2D, autorzy nie znajƒÖ innego
+oprogramowania o takich mo≈ºliwo≈õciach jak synfig.
 
 %package devel
 Summary:	Header files for Synfig
-Summary(pl):	Pliki nag≥Ûwkowe Synfiga
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe Synfiga
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for Synfig.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe Synfiga.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe Synfiga.
 
 %prep
 %setup -q
