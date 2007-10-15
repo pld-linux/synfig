@@ -1,0 +1,15 @@
+diff -ur synfig-0.61.07-o/src/synfig/Makefile.am synfig-0.61.07/src/synfig/Makefile.am
+--- synfig-0.61.07-o/src/synfig/Makefile.am	2007-10-14 22:03:37.000000000 -0600
++++ synfig-0.61.07/src/synfig/Makefile.am	2007-10-14 22:04:50.000000000 -0600
+@@ -2,8 +2,10 @@
+ 
+ # SUBDIRS=proto
+ 
++AUTOMAKE_OPTIONS=nostdinc
++
+ MAINTAINERCLEANFILES=Makefile.in proto/nodebase.h
+-INCLUDES = -I$(top_srcdir)/src -I$(top_srcdir)/libltdl
++INCLUDES = -I$(top_srcdir)/src -I$(top_srcdir) -I$(top_srcdir)/libltdl
+ 
+ EXTRA_DIST=surfacenew.cpp pch.h proto/Makefile proto/nodebase.h proto/nodebase.px proto/proto.m4 synfig.nsh
+ 

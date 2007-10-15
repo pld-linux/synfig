@@ -1,0 +1,14 @@
+diff -ur synfig-0.61.07-o/Makefile.am synfig-0.61.07/Makefile.am
+--- synfig-0.61.07-o/Makefile.am	2007-06-20 06:35:52.000000000 -0600
++++ synfig-0.61.07/Makefile.am	2007-10-12 10:16:37.000000000 -0600
+@@ -115,9 +115,6 @@
+ 
+ run: check
+ 
+-$(srcdir)/configure:  $(srcdir)/configure.in $(ACLOCAL_M4) $(CONFIGURE_DEPENDENCIES)
+-	$(srcdir)/bootstrap
+-
+ .doc_stamp: doxygen.cfg
+ 	$(DOXYGEN) doxygen.cfg
+ 	touch .doc_stamp
+Only in synfig-0.61.07: Makefile.am~

@@ -1,0 +1,16 @@
+diff -ur synfig-0.61.07-o/config/configure.ac synfig-0.61.07/config/configure.ac
+--- synfig-0.61.07-o/config/configure.ac	2007-10-05 20:28:50.000000000 -0600
++++ synfig-0.61.07/config/configure.ac	2007-10-13 23:58:36.000000000 -0600
+@@ -47,11 +47,6 @@
+ 
+ 
+ AC_ARG_TIMELIMIT
+-AC_ARG_DEBUG
+-AC_ARG_OPTIMIZATION
+-AC_ARG_WARNINGS
+-AC_ARG_PROFILING
+-AC_ARG_PROFILE_ARCS
+ AC_ARG_BRANCH_PROBABILITIES
+ dnl AC_ARG_LICENSE_KEY
+ 
+Only in synfig-0.61.07/config: configure.ac~
