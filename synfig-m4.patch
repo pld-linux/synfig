@@ -1,0 +1,13 @@
+--- synfig-0.64.2.orig/m4/subs.m4	2014-04-07 14:04:51.000000000 +0200
++++ synfig-0.64.2/m4/subs.m4	2014-11-16 22:17:50.308836164 +0100
+@@ -88,8 +88,8 @@
+ 	esac
+ 
+ 
+-	CXXFLAGS="`echo $CXXFLAGS | sed s:-g::` $debug_flags"
+-	CFLAGS="`echo $CFLAGS | sed s:-g::` $debug_flags"
++	CXXFLAGS="`echo $CXXFLAGS | sed 's:-g : :; s:-g$::'` $debug_flags"
++	CFLAGS="`echo $CFLAGS | sed 's:-g : :; s:-g$::'` $debug_flags"
+ 
+ 	AC_MSG_RESULT([$debug_flags])
+ ])
